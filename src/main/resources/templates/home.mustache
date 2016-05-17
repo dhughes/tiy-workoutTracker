@@ -1,0 +1,53 @@
+<html>
+<body>
+
+<form action="/add-workout" method="post">
+    <div>
+        <label for="exercise">Exercise</label>
+        <input type="text" name="exercise" value="" />
+    </div>
+    <div>
+        <label for="sets">Sets</label>
+        <input type="text" name="sets" value="" />
+    </div>
+    <div>
+        <label for="reps">Reps</label>
+        <input type="text" name="reps" value="" />
+    </div>
+    <button>Add Workout</button>
+</form>
+
+<form action="/" method="get">
+    <div>
+        <label for="search">Search</label>
+        <input type="text" name="search" value="" />
+    </div>
+    <button>Search</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>Exercise</th>
+        <th>Sets</th>
+        <th>Reps</th>
+    </tr>
+
+    {{#workouts}}
+        <tr>
+            <td>
+                {{exercise}}
+            </td>
+            <td>
+                {{#sets}}
+                    {{.}}
+                {{/sets}}
+            </td>
+            <td>
+                {{reps}}
+            </td>
+        </tr>
+    {{/workouts}}
+</table>
+
+</body>
+</html>
