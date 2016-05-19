@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1034935372">
+  <component name="DataSourceManagerImpl" format="xml" hash="518368898">
     <data-source source="LOCAL" name="PostgreSQL - workouttracker@localhost" uuid="3a62df38-b52e-4755-b6c8-39f07705fe5f">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

@@ -1,0 +1,20 @@
+<html>
+
+<body>
+    {{#error}}
+        <div class="font-color: red;">{{.}}</div>
+    {{/error}}
+    <form action="/login" method="post">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" value="{{#username}}{{.}}{{/username}}" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" value="" />
+        </div>
+
+        <button>Log in!!</button>
+    </form>
+</body>
+</html>

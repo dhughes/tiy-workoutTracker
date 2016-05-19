@@ -1,9 +1,6 @@
 package com.theironyard;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Workout {
@@ -14,9 +11,16 @@ public class Workout {
 
     private String exercise;
 
+    private String muscleGroup;
+
     private Integer sets;
 
     private int reps;
+
+    private String notes;
+
+    @ManyToOne
+    private User user;
 
     public int getId() {
         return id;
@@ -48,5 +52,29 @@ public class Workout {
 
     public void setSets(Integer sets) {
         this.sets = sets;
+    }
+
+    public String getMuscleGroup() {
+        return muscleGroup;
+    }
+
+    public void setMuscleGroup(String muscleGroup) {
+        this.muscleGroup = muscleGroup;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
